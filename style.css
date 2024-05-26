@@ -5,6 +5,15 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+h1 {
+    font-family: 'Arial', sans-serif;  /* Define a fonte do texto */
+    font-size: 34px;                   /* Tamanho da fonte */
+    color: #ffffff;                       /* Cor do texto */
+    text-align: center;                /* Alinhamento do texto */
+    padding: 20px;                     /* Espaçamento interno */
+    border-radius: 10px;               /* Bordas arredondadas */
+}
+
 .parallax-container {
     position: relative;
     height: 100vh;
