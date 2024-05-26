@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-background"></div>
+        <div class="content">
+            <h1>Efeito Parallax e tabelas</h1>
+            <p>Demonstração prática</p>
+        </div>
+    </div>
+    <div class="content-section">
+        <h2>Ainda usamos tabelas?</h2>
+        <p>Segue alguns exemplos de tabelas</p>
+    </div>
+    
+    <table>
+        <caption>Mesclagem de linhas / Colunas</caption>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td> <!--Ocupar duas colunas na linha - Expansão/mesclagem
+            Existe expansão em coluna e expansão em linha
+            Não é pq está na linha que é uma expansão de row, pois vai ser aplicado em nas duas colunas-->
+
+        </tr>
+
+        <tr>
+            <td rowspan="3">D</td> <!--td rowspan="3" - Ocupar 3 linhas-->
+            <td>E</td>
+            <td>F</td> 
+        </tr>
+
+        <tr>
+
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+
+            <td colspan="2">L</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Filmes favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupos</th> <!--Está em forma de coluna / as informações estão embaixo (coluna)-->
+                <th>Nomes</th> <!--Está em forma de coluna / as informações estão embaixo (coluna)-->
+                <th colspan="3" scope="colgroup">Filmes</th> <!--Colgroup pois é um grupo de colunas, ao ter mesclagem de linhas/colunas validamos o grupo e não o individual-->
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</th> <!--Grupo de linhas (Beatriz, Cláudia e Ana)-->
+                <td>Beatriz</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>hulk</td>
+            </tr>
+
+            <tr>
+                <td style="background-color: white;">Cláudia</td>
+                <td style="background-color: white;">Matrix</td>
+                <td style="background-color: white;">Big hero</td>
+                <td style="background-color: white;">Batman</td>
+            </tr>
+
+            <tr>
+                <td>Ana</td>
+                <td>Barbie</td>
+                <td>Logna</td>
+                <td>Inception</td>
+            </tr>
+
+            <tr>
+                <th rowspan="3" scope="rowgroup" style="background-color: white;">Homens</th> <!--Grupo de linhas (Bruno, Daniel e Fabiano )-->
+                <td style="background-color: white;">Bruno</td>
+                <td style="background-color: white;">Intocaveis</td>
+                <td style="background-color: white;">Wall-e</td>
+                <td style="background-color: white;">amnesia</td>
+            </tr>
+
+            <tr>
+                <td>Daniel</td>
+                <td>Star wars</td>
+                <td>Star Trek</td>
+                <td>Superman</td>
+            </tr>
+
+            <tr>
+                <td style="background-color: white;">Fabiano</td>
+                <td style="background-color: white;">Toy Story</td>
+                <td style="background-color: white;">Gladiador</td>
+                <td style="background-color: white;">Taxi Driver</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <table>
+        <caption>População das unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--scope="col" quer dizer que é um escopo de coluna mas poderia ser na mesma linha-->
+                <th scope="col" class="largura">População</th> <!--definindo toda a largura da população-->
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td style="background-color: white;">Minas Gerais</td>
+                <td class="num" style="background-color: white;">20 538 718</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th> <!--scope="row"quer dizer que é um escopo de linha-->
+                <td class="num"> <strong>81.004.480</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div id="container">  
+        <table>
+            <caption> tabela responsiva</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Amazon echo</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>Smartv</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>Rádio</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>Computador</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>Controle remoto</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
